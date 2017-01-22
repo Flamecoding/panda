@@ -1,0 +1,73 @@
+Panda 쇼핑몰 사항
+
+DB
+포트번호 9090
+아이디 : panda
+비번 : panda
+-- 테이블 삭제
+drop table 	category CASCADE CONSTRAINTS;
+drop table categoryDown CASCADE CONSTRAINTS;
+drop table product CASCADE CONSTRAINTS;
+
+-- 시퀀스 삭제
+drop sequence category_seq;
+drop sequence categoryDown_seq;
+drop sequence product_seq;
+
+-- 테이블 생성
+create table category( -- 카테고리
+	category_num number primary key, -- 카테고리 번호
+	category_name varchar2(100) not null -- 카테고리 이름
+	); 
+
+create sequence category_seq;
+
+create table categoryDown( -- 하위 카테고리
+	categoryDown_num number primary key, -- 하위 카테고리 번호
+	category_num number not null, -- 카테고리 번호(참조)
+	categoryDown_name varchar2(100) not null, -- 하위 카테고리 이름
+	constraint categoryDown_FK foreign key(category_num) 
+	references category(category_num)
+	);
+
+create sequence categoryDown_seq;
+
+create table product( -- 상품 메인
+	product_num number primary key, -- 상품 번호
+	categoryDown_num not null, -- 하위 카테고리 번호(참조)
+	product_name varchar2(100) not null, -- 상품 이름
+	product_price number not null, -- 상품 가격
+	product_content varchar2(3000), -- 상품 설명
+	constraint product_FK foreign key(categoryDown_num)
+	references categoryDown(categoryDown_num)
+	);
+
+create sequence product_seq;
+
+create table productImage(-- 상품이미지 
+	file_num number primary key, -- 파일 번호
+	product_num number not null, -- 상품 번호 (참조)
+	origin_name varchar2(100) not null, -- 원본 이름
+	file_name varchar2(100) not null, -- 저장된 파일이름
+	constraint productImage_FK foreign key(product_num)
+	references product(product_num)
+	);
+
+create sequence seq_hotelImage;
+-- 메인에 띄울이미지, 컨텐트에 들어갈 서브 이미지 , Q&A, review,  판매자 정보 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
