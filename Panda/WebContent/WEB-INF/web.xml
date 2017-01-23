@@ -8,4 +8,5 @@
     <servlet-name>category</servlet-name>
     <url-pattern>*.cg</url-pattern>
   </servlet-mapping>
+  
 </web-app>
