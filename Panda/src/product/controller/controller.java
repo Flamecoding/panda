@@ -14,7 +14,7 @@ public class controller extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		controller con = new controller();
+		controller con = new controller();aaa
 		con.service(req, resp);
 	}
 
