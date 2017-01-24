@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app>
-	<servlet>
-		<servlet-name>category</servlet-name>
-		<servlet-class>product.controller.controller</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>category</servlet-name>
-		<url-pattern>*.cg</url-pattern>
-	</servlet-mapping>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <servlet>
+    <servlet-name>category</servlet-name>
+    <servlet-class>product.controller.controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>category</servlet-name>
+    <url-pattern>*.cg</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

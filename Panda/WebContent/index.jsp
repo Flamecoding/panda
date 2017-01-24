@@ -1,12 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>╦чюн х╗</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>К╘■Л²╦ М≥┬</title>
 </head>
 <body>
-	<a href ="category.cg?Command=insertCategoryForm">д╚ев╟М╦╝ ╩Щ╪╨</a><br>
-	<a href ="category.cg?Command=insertCategoryDown">гою╖ д╚ев╟М╦╝ ╩Щ╪╨</a>
+<!-- header/nav/footer К╞╦М²╛Л╤■Й╟─ 0123 -->
+<%@ include file="/common/header.jsp" %>
+<%@ include file="/common/nav.jsp" %>
+<section id="main_section">
+<!-- nav Л≤│Л≈╜Л≈░ Л╧╢М┘▄ЙЁ═К╕╛ М▄░ К▀╓Л²▄ Л≤╝Й╦╟  -->
+	<a href ="category.cg?Command=insertCategoryForm">Л╧╢М┘▄ЙЁ═К╕╛ Л┐²Л└╠</a><br>
+	<a href ="category.cg?Command=insertCategoryDown">М∙≤Л°└ Л╧╢М┘▄ЙЁ═К╕╛ Л┐²Л└╠</a>
+</section>
+<%@ include file="/common/footer.jsp" %>
 </body>
 </html>
